@@ -5,9 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-
-    },
+    fontFamily: {
+      
+      'display': ['Old English Text MT' ]
+    }
   },
   plugins: [],
 };

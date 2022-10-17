@@ -1,0 +1,7 @@
+@font-face {
+    font-family: old-english-text-mt-regular;
+    src: url('/fonts/OLD.ttf');
+}
+.font-oet {
+    font-family: old-english-text-mt-regular;
+}

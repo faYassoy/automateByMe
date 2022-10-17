@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckBoxComponent, InputButtonComponent, InputCheckboxGroupComponent, InputCountComponent, InputDateComponent, InputDefaultComponent, InputDiscountComponent, InputEditorComponent, InputMultipleDateComponent, InputOtpComponent, InputPhoneComponent, InputRadioGroupComponent, InputRupiahComponent, InputStarComponent, InputStatusComponent, RadioComponent, SelectComponent, SelectMultipleComponent } from '../components/base_component';
+import { CheckBoxComponent, InputButtonComponent, InputCheckboxGroupComponent, InputCountComponent, InputDateComponent, InputDefaultComponent, InputDiscountComponent, InputEditorComponent, InputMultipleDateComponent, InputOtpComponent, InputPhoneComponent, InputRadioGroupComponent, InputRupiahComponent, InputStarComponent, InputStatusComponent, RadioComponent, SelectComponent, SelectMultipleComponent } from '../../components/base_component';
 import { faArrowTrendDown, faCalendarCheck, faList, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Component = () => {

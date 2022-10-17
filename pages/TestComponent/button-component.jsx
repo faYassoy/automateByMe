@@ -1,6 +1,6 @@
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { ButtonComponent, InputDefaultComponent } from '../components/base_component';
+import { ButtonComponent, InputDefaultComponent } from '../../components/base_component';
 
 const ButtonComponentPage = () => {
     return (

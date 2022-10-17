@@ -1,5 +1,6 @@
 import '../styles/general.css';
 import '../styles/darkmode.css';
+import '../public/fonts/fonts.css'
 
 import React, {
   useEffect,

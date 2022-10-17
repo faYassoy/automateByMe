@@ -867,3 +867,7 @@ input::-webkit-calendar-picker-indicator {
         background-position-x: -200%;
     }
 }
+
+.selected{
+	@apply bg-sky-400 text-[#ffffff]
+}

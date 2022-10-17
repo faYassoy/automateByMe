@@ -13,17 +13,17 @@ const token_cookie_name = APP_NAME + ".user.token";
 
 export const get = async (
   path,
-  { search, filter, sortBy, sortDirection, paginate, page }
+  { search, filter, orderBy, orderDirection, perpage, page }
 ) => {
   try {
     return await axios
       .get(
-        `${API_URL}/${path}?paginate=${paginate ? paginate : 0}` +
+        `${API_URL}/${path}?perpage=${perpage ? perpage : 0}` +
         (search ? `&search=${search}` : "") +
         (filter ? `&filter=${filter}` : "") +
-        (sortBy ? `&sort_by=${sortBy}` : "") +
-        (sortDirection
-          ? `&sort_direction=${sortDirection.toLowerCase()}`
+        (orderBy ? `&order_by=${orderBy}` : "") +
+        (orderDirection
+          ? `&order_direction=${orderDirection.toLowerCase()}`
           : "") +
         (page ? `&page=${page}` : ""),
 
@@ -52,15 +52,12 @@ export const get = async (
 
 
 export const post = async (path, data, params, contentType) => {
-  var newData = {};
-  data.forEach((value, key) => newData[key] = value);
-
   try {
     return await axios
-      .post(`${API_URL}/${path}${params ? "?" + params : ""}`, newData, {
+      .post(`${API_URL}/${path}${params ? "?" + params : ""}`, data, {
         headers: {
           Authorization: Cookies.get(token_cookie_name) ? "Bearer " + Decrypt(Cookies.get(token_cookie_name)) : "",
-          "Content-Type": contentType ? contentType : "application/json",
+          "content-type": contentType ? contentType : "multipart/form-data",
         },
       })
       .then((res) => {
@@ -82,15 +79,12 @@ export const post = async (path, data, params, contentType) => {
 
 export const put = async (path, data, params, contentType) => {
   try {
-    // data.append("_method", "PUT");
-    var newData = {};
-    data.forEach((value, key) => newData[key] = value);
+    data.append("_method", "PUT");
     return await axios
-      .put(`${API_URL}/${path}${params ? "?" + params : ""}`, newData, {
+      .post(`${API_URL}/${path}${params ? "?" + params : ""}`, data, {
         headers: {
           Authorization: Cookies.get(token_cookie_name) ? "Bearer " + Decrypt(Cookies.get(token_cookie_name)) : "",
-          // "content-type": contentType ? contentType : "multipart/form-data",
-          "content-type": contentType ? contentType : "application/json",
+          "content-type": contentType ? contentType : "multipart/form-data",
         },
       })
       .then((res) => {

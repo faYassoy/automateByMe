@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BadgeComponent, BreadcumbComponent, ButtonComponent, CardComponent, CheckBoxComponent, MenuBarComponent, ModalComponent, ModalConfirmComponent, ModalRightComponent, WizardComponent } from '../components/base_component';
+import { BadgeComponent, BreadcumbComponent, ButtonComponent, CardComponent, CheckBoxComponent, MenuBarComponent, ModalComponent, ModalConfirmComponent, ModalRightComponent, WizardComponent } from '../../components/base_component';
 
 const OtherComponent = () => {
     const [confirm, setConfirm] = useState(false);
@@ -157,7 +157,7 @@ const OtherComponent = () => {
                                 label={"Cancel"}
                                 color="danger"
                                 size={"sm"}
-                        />
+                            />
                             <ButtonComponent
                                 label={"Yes, Do it!"}
                                 bg="primary"

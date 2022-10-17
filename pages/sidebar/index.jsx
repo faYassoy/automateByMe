@@ -15,33 +15,33 @@ const Sidebar = () => {
                 },
                 {
                     icon: faCube,
-                    label: "Menu",
+                    label: "first Menu",
                     submenu: [
                         {
                             icon: faCube,
-                            label: "Menu",
+                            label: "first Menu dot 1",
                             path: "/1.1",
                         },
                         {
                             icon: faCube,
-                            label: "Menu",
+                            label: "first Menu dot 2",
                             path: "/1.2",
                         },
                     ]
                 },
                 {
                     icon: faCube,
-                    label: "Menu",
+                    label: "second Menu",
                     path: "/2",
                 },
                 {
                     icon: faCube,
-                    label: "Menu",
+                    label: "3rd Menu",
                     path: "/3",
                 },
                 {
                     icon: faCube,
-                    label: "Menu",
+                    label: "4th Menu",
                     path: "/4",
                 },
             ],
